@@ -29,10 +29,10 @@ def pprint_bar(bar_dict):
 
 
 if __name__ == '__main__':
-    data = load_data()
+    data_bars = load_data()
     print('Самый большой:')
-    pprint_bar(get_biggest_bar(data))
+    pprint_bar(get_biggest_bar(data_bars))
     print('Самый маленький:')
-    pprint_bar(get_smallest_bar(data))
+    pprint_bar(get_smallest_bar(data_bars))
     print('Самый близкий:')
-    pprint_bar(get_closest_bar(data, sys.argv[1], sys.argv[2]))
+    pprint_bar(get_closest_bar(data_bars, sys.argv[1], sys.argv[2]))
