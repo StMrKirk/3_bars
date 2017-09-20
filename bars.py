@@ -7,25 +7,25 @@ def load_data():
         return json.load(file_handler)
 
 
-def get_biggest_bar(data):
-    biggest_bar = max(data['features'], key=lambda seats: seats['properties']['Attributes']['SeatsCount'])
+def get_biggest_bar(data_bars):
+    biggest_bar = max(data_bars['features'], key=lambda seats: seats['properties']['Attributes']['SeatsCount'])
     return biggest_bar
 
 
-def get_smallest_bar(data):
-    smallest_bar = min(data['features'], key=lambda seats: seats['properties']['Attributes']['SeatsCount'])
+def get_smallest_bar(data_bars):
+    smallest_bar = min(data_bars['features'], key=lambda seats: seats['properties']['Attributes']['SeatsCount'])
     return smallest_bar
 
 
-def get_closest_bar(data, longitude, latitude):
+def get_closest_bar(data_bars, longitude, latitude):
     gps = [float(longitude), float(latitude)]
-    closest_bar = min(data['features'], key=lambda coord: (gps[0]-coord['geometry']['coordinates'][0])**2 +
-                                                          (gps[1]-coord['geometry']['coordinates'][1])**2)
+    closest_bar = min(data_bars['features'], key=lambda coord: (gps[0]-coord['geometry']['coordinates'][0])**2 +
+                                                               (gps[1]-coord['geometry']['coordinates'][1])**2)
     return closest_bar
 
 
-def pprint_bar(bar):
-    print(bar['properties']['Attributes']['Name'])
+def pprint_bar(bar_dict):
+    print(bar_dict['properties']['Attributes']['Name'])
 
 
 if __name__ == '__main__':
