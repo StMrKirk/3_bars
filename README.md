@@ -1,18 +1,21 @@
 # Ближайшие бары
 
-[FIXME. Здесь будет описание проекта]
+Programm return biggest smallest and closest to user bar name
 
 # Как запустить
 
 Скрипт требует для своей работы установленного интерпретатора Python версии 3.5
 
-Запуск на Linux:
-
+Windows 10, PS:
 ```#!bash
 
-$ python bars.py # possibly requires call of python3 executive instead of just python
-# FIXME вывести пример ответа скрипта
-
+PS C:\ python bars.py <longitude> <latitude>
+Самый большой:
+<bar name>
+Самый маленький:
+<bar name>
+Самый близкий:
+<bar name>
 ```
 
 Запуск на Windows происходит аналогично.
